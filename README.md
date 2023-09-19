@@ -1,4 +1,4 @@
-# batch-ping-utility
+# Batch Ping Utility
 A simple GUI python program to ping IP addresses.
 
 ## About
