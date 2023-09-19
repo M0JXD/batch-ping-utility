@@ -1,7 +1,5 @@
 # Simple GUI Batch Ping Utility
 # 06/09/2023 Jamie Drinkell
-# Free for any use, provided 'as is' with no guarantees or warranties etc.
-# IPv4 Only
 # Thanks to https://www.abstractapi.com/guides/validate-ip-address-python for the IP checker
 
 from ping3 import ping
