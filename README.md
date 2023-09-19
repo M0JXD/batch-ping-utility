@@ -3,7 +3,7 @@ A simple GUI python program to ping IP addresses.
 
 ## About
 
-A friend of mine needed a way to ping a group of IP addresses easily to check some old equipment that operates over CAN. These pieces of equipment are notorious for "forgetting" their static IP, but usually repsond to another. <br />
+A friend of mine needed a way to ping a group of IP addresses easily to check some old equipment that operates over CAN. These pieces of equipment are notorious for "forgetting" their static IP, but usually respond to another if you can find it. <br />
 Of course using Powershell/Bash is the usual solution but I said I'd make him a little GUI utility to make his life that little bit easier.
 
 ## Usage guide
