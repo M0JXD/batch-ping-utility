@@ -1,9 +1,9 @@
 # Simple GUI Batch Ping Utility
-# 06/09/2023 Jamie Drinkell
+# 27/06/24 Jamie Drinkell
 # Thanks to https://www.abstractapi.com/guides/validate-ip-address-python for the IP checker
 
 from ping3 import ping
-import PySimpleGUI as gui
+import FreeSimpleGUI as gui
 import ipaddress
 
 # Globals #
