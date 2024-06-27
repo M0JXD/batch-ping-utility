@@ -14,7 +14,7 @@ Any good pings will be recorded in the noted box. Current pings being tried (and
 ## Running the code
 
 Install the latest Python if you don't have it (3.12). <br />
-Note on Linux you may need to use "python3" instead of "python" in the commands.
+Note on Linux you may need to use "python3" instead of "python" in the commands.  <br />
 Install ping3 and FreeSimpleGUI via pip:
 ```
 python -m pip install ping3
@@ -34,11 +34,11 @@ python .\batch_ping_util.pyw
 python ./batch_ping_util.pyw
 ```
 
-This software originally used PySimpleGUI, however the license changes are unacceptable to me.
-Please read more here: https://freesimplegui.readthedocs.io/en/latest/#background-why-freesimplegui-came-to-be
-The program now uses the fork of the last LGPL version, FreeSimpleGUI.
+This software originally used PySimpleGUI, however the license changes are unacceptable to me. <br />
+Please read more here: https://freesimplegui.readthedocs.io/en/latest/#background-why-freesimplegui-came-to-be <br />
+The program now uses the fork of the last LGPL version, FreeSimpleGUI. <br />
 
-Should it be installed, please run this to remove the old library please run:
+Should it be installed, please run this to remove the old library:
 ```
 python -m pip uninstall PySimpleGUI
 ```
@@ -55,9 +55,9 @@ pyinstaller batch_ping_util.pyw -F
 ```
 (The -F signifies to create an all-in-one executable, as opposed to a distribution with lots of library files etc.)
 
-An executable is provided for Windows in releases. 
+An executable is provided for Windows in releases. <br />
 As most Linux distros have Python pre-installed, and it is only a small program, I see no point in making a 
-binary for Linux.
+binary for Linux. <br />
 I have no Apple devices so Mac users are on their own.
 
 ## Ideas For Improvement
