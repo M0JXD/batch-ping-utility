@@ -21,9 +21,9 @@ python -m pip install ping3
 python -m pip install FreeSimpleGUI
 ```
 
-Then run. In most cases you can just double-click or right-click->execute the .pyw file from your file manager:
+Then run. In most cases you can just double-click or right-click->execute the .pyw file from your file manager.
 
-Alternatively from a Terminal:
+Alternatively from a Terminal: <br />
 Windows:
 ```
 python .\batch_ping_util.pyw
