@@ -74,8 +74,7 @@ def calculate_next_address(address):
     return address_to_ping
 
 
-def do_ping(address):
-    global timeout
+def do_ping(address, timeout):
     print_to_box("Pinging address " + str(address))
     response = ping(address, timeout=timeout)
     if response is None or False:
@@ -94,7 +93,7 @@ def keep_pinging():
         root.after_cancel(keep_pinging_canceller)
     else:
         next_address = calculate_next_address(old_address)
-        do_ping(next_address)
+        do_ping(next_address, timeout)
         old_address = next_address
         keep_pinging_canceller = root.after(10, keep_pinging)
 
@@ -133,7 +132,7 @@ def on_start():
 
 
     print_to_box("Beginning pings!")
-    do_ping(start_address)
+    do_ping(start_address, timeout)
     if (start_address == end_address): 
         print_to_box("Finished pings!")
         return

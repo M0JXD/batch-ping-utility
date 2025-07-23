@@ -6,6 +6,8 @@ A simple GUI python program to ping IP addresses.
 A friend of mine needed a way to ping a group of IP addresses easily to check some old equipment that operates over CAN. These pieces of equipment are notorious for "forgetting" their static IP, but may respond to another if you can find it. <br />
 Of course using Powershell/Bash is the usual solution, but I said I'd make him a little GUI utility to make his life that little bit easier.
 
+At the moment the Ping library does not seem to work on Windows.
+
 ## Usage guide
 
 Fairly simple, enter the desired start and end IPv4 addresses and hit "Start". You can optionally set timeout, but leaving it blank will default it to 1 second. <br />
