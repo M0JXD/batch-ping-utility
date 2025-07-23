@@ -107,11 +107,11 @@ def on_start():
     timeout = tk_timeout.get()
 
     if start_address == '':
-        print_to_box("Please enter a valid start address!")
+        print_to_box("Please enter a start address!")
         return
 
     if end_address == '':
-        print_to_box("Please enter a valid end address!")
+        print_to_box("Please enter a end address!")
         return
 
     if not validate_ip_address(start_address):
@@ -155,6 +155,8 @@ def on_cancel():
     start_button.config(state='normal')
     cancel_button.config(state='disabled')
 
+
+# Buttons need to be after their callback declarations 
 start_button = tk.Button(root, text="Start", command=on_start)
 cancel_button = tk.Button(root, text="Cancel", command=on_cancel)
 cancel_button.config(state='disabled')
