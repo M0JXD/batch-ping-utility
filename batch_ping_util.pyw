@@ -32,7 +32,7 @@ timeout_label       = tk.Label(root, text="Enter Timeout (Default = 1s):")
 timeout_entry       = tk.Entry(root, textvariable=tk_timeout, width=45)
 ping_info_label     = tk.Label(root, text="Current ping info displayed here -> ")
 ping_info_box       = st.ScrolledText(root, bg="white", height=6, width=44)
-ping_info_box.insert(tk.INSERT, "Good Pings are recorded here :)\n")
+ping_info_box.insert(tk.INSERT, "Ping information is recorded here :)\n")
 ping_info_box.see(tk.END)
 ping_info_box.config(state = "disabled")
 
