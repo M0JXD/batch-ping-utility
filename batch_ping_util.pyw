@@ -37,7 +37,6 @@ ping_info_box.see(tk.END)
 ping_info_box.config(state = "disabled")
 
 # Functions #
-
 def print_to_box(message):
     ping_info_box.config(state = "normal")
     ping_info_box.insert(tk.INSERT, message + "\n")
@@ -104,7 +103,6 @@ def on_start():
     start_address = tk_start_address.get()
     end_address = tk_end_address.get()
     timeout = tk_timeout.get()
-
     if start_address == '':
         print_to_box("Please enter a start address!")
         return
@@ -155,7 +153,7 @@ def on_cancel():
     cancel_button.config(state='disabled')
 
 
-# Buttons need to be after their callback declarations 
+# Buttons need to be after their callback definitions
 start_button = tk.Button(root, text="Start", command=on_start)
 cancel_button = tk.Button(root, text="Cancel", command=on_cancel)
 cancel_button.config(state='disabled')
