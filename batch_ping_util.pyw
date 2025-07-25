@@ -158,7 +158,7 @@ cancel_button = tk.Button(root, text="Cancel", command=on_cancel)
 cancel_button.config(state='disabled')
 print_to_box("Ping information is recorded  here:)")
 
-# Apply widgets to grid
+# Apply widgets to grid and run GUI #
 first_address_label.grid(row=0, column=0, sticky=tk.W)
 first_address_entry.grid(row=0, column=1, sticky=tk.E)
 last_address_label.grid(row=1, column=0, sticky=tk.W)
