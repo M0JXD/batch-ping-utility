@@ -32,9 +32,6 @@ timeout_label       = tk.Label(root, text="Enter Timeout (Default = 1s):")
 timeout_entry       = tk.Entry(root, textvariable=tk_timeout, width=45)
 ping_info_label     = tk.Label(root, text="Current ping info displayed here -> ")
 ping_info_box       = st.ScrolledText(root, bg="white", height=6, width=44)
-ping_info_box.insert(tk.INSERT, "Ping information is recorded here :)\n")
-ping_info_box.see(tk.END)
-ping_info_box.config(state = "disabled")
 
 # Functions #
 def print_to_box(message):
@@ -155,10 +152,11 @@ def on_cancel():
     cancel_button.config(state='disabled')
 
 
-# Buttons need to be after their callback definitions
+# Buttons and details need to be after their definitions
 start_button = tk.Button(root, text="Start", command=on_start)
 cancel_button = tk.Button(root, text="Cancel", command=on_cancel)
 cancel_button.config(state='disabled')
+print_to_box("Ping information is recorded  here:)")
 
 # Apply widgets to grid
 first_address_label.grid(row=0, column=0, sticky=tk.W)
