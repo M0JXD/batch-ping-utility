@@ -75,11 +75,17 @@ def calculate_next_address(address):
 
 def do_ping(address, timeout):
     print_to_box("Pinging address " + str(address))
-    response = ping(address, timeout=timeout)
-    if response is None or False:
-        print_to_box("Failed to reach " + str(address))
-    else:
-        print_to_box("Pinged " + str(address) + " in " + str(f"{response:.9f}"))
+    try:
+        response = ping(address, timeout=timeout)
+        if response is None or False:
+            print_to_box("Failed to reach " + str(address))
+        else:
+            print_to_box("Pinged " + str(address) + " in " + str(f"{response:.9f}"))
+    except OSError:
+        print_to_box("Error occured. Ensure that:")
+        print_to_box("-> You're running with root privileges.")
+        print_to_box("-> You're connected to a network.")
+        on_cancel()
 
 
 def keep_pinging():
@@ -131,10 +137,6 @@ def on_start():
 
     print_to_box("Beginning pings!")
     do_ping(start_address, timeout)
-    if (start_address == end_address): 
-        print_to_box("Finished pings!")
-        return
-
     start_button.config(state='disabled')
     cancel_button.config(state='normal')
     old_address = start_address
@@ -160,13 +162,13 @@ cancel_button.config(state='disabled')
 
 # Apply widgets to grid
 first_address_label.grid(row=0, column=0, sticky=tk.W)
-first_address_entry.grid(row=0, column=1)
+first_address_entry.grid(row=0, column=1, sticky=tk.E)
 last_address_label.grid(row=1, column=0, sticky=tk.W)
-last_address_entry.grid(row=1, column=1)
+last_address_entry.grid(row=1, column=1, sticky=tk.E)
 timeout_label.grid(row=2, column=0, sticky=tk.W)
-timeout_entry.grid(row=2, column=1)
+timeout_entry.grid(row=2, column=1,  sticky=tk.E)
 ping_info_label.grid(row=3, column=0, sticky=tk.W)
-ping_info_box.grid(row=3, column=1)
+ping_info_box.grid(row=3, column=1, sticky=tk.E)
 start_button.grid(row=4, column=0)
 cancel_button.grid(row=4, column=1)
 root.mainloop()
